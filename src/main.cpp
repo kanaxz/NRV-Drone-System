@@ -22,7 +22,7 @@ int main(void)
   motorBR = new Motor(17); // Instanciates the motor from GPIO 17
 
   // Open the device in non-blocking mode
-  int fd = open("/dev/servoblaster", O_RDWR | O_NONBLOCK);
+  int fd = open("/dev/servoblaster", O_RDWR);
 
   
   if(fd < 0){
@@ -46,7 +46,7 @@ int main(void)
       // real error
       std::cout<<"real error ?"<<std::endl;
     }
-
+    delete [] message;
   }
   // Try to write some data
   
