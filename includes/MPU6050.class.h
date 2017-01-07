@@ -32,8 +32,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <linux/i2c-dev.h>
-#include "../math/Quaternion.class.h"
- #include "../math/VectorFloat.class.h"
+#include "Quaternion.class.h"
+ #include "VectorFloat.class.h"
 
 
 

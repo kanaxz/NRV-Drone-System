@@ -2,9 +2,9 @@
 #ifndef _BRAIN_H_
 #define _BRAIN_H_
 
-#include "../MPU6050/MPU6050.class.h"
-#include "../motor/Motor.class.h"
-#include "../math/PID.class.h"
+#include "MPU6050.class.h"
+#include "Motor.class.h"
+#include "PID.class.h"
 
 class Brain
 {

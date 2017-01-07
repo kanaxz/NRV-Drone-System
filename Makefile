@@ -32,7 +32,7 @@ DIRINC		=	./includes/
 # **************************************************************************** #
 
 CC			=	g++
-CFLAG		=	-Wall -Wextra -Werror
+CFLAG		=	-Wall -Wextra -Werror -std=c++11
 INCS		=	-I$(DIRINC)
 LIBS		=   
 
