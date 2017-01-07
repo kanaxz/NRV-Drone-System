@@ -17,7 +17,7 @@
  * along with Raspcopter.  If not, see <http://www.gnu.org/licenses/>.
  * ================================================================== */
 
-#include "PID.h"
+#include "PID.class.h"
 
 PID::PID(float p, float i, float d)
 {
