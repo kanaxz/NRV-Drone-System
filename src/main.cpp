@@ -28,9 +28,17 @@ int main(void)
   if(fd < 0){
     std::cout<<"fd error"<<std::endl;
   }
-     
+  
+  
+  while(true){
+    char *message;
+    std::cin>>message;
+    std::cout<< "message="<<message<<",size="<<strlen(message)<<endl;
+    ssize_t written = write(fd, message, strlen(message));
+
+  }
   // Try to write some data
-  ssize_t written = write(fd, "1=25%", 5);
+  
 
  
   if(written >= 0){
