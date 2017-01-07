@@ -35,24 +35,24 @@ int main(void)
     std::cin>>message;
     std::cout<< "message="<<message<<",size="<<strlen(message)<<std::endl;
     ssize_t written = write(fd, message, strlen(message));
+      if(written >= 0){
+      // success
+      std::cout<<"success"<<std::endl;
+    }
+    else if(errno == EWOULDBLOCK)
+      // write blocked
+      std::cout<<"write blocked"<<std::endl;
+    else {
+      // real error
+      std::cout<<"real error ?"<<std::endl;
+    }
 
   }
   // Try to write some data
   
 
  
-  if(written >= 0){
-    // success
-    std::cout<<"success"<<std::endl;
-  }
-  else if(errno == EWOULDBLOCK)
-    // write blocked
-    std::cout<<"write blocked"<<std::endl;
-  else {
-    // real error
-    std::cout<<"real error ?"<<std::endl;
-  }
-
+  
   close(fd);
 
   // DESTROY TIME
