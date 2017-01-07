@@ -9,11 +9,14 @@ NAME		=	drone_controller
 #		SOURCES
 # **************************************************************************** #
 
-DIRSRC		=	srcs
+DIRSRC		=	src
+CMPTDIR     =   $(DIRSRC)/components
 
-SRCS =	main.cpp
-#		$(DIRSRC)/keyhooks.cpp \
-		$(DIRSRC)/Motor.class.cpp
+SRCS =	$(DIRSRC)/main.cpp
+		$(CMPTDIR)/Motor/Motor.class.cpp
+		$(CMPTDIR)/MPU6050/MPU6050.class.cpp
+		$(CMPTDIR)/brain/Brain.class.cpp
+		$(CMPTDIR)/PID/PID.class.cpp
 
 # **************************************************************************** #
 #		DIRECTORIES
