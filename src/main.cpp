@@ -23,6 +23,8 @@ int main(void)
 
   // Open the device in non-blocking mode
   int fd = open("/dev/ttyPA1", O_RDWR | O_NONBLOCK);
+
+  /*
   if(fd < 0)
       ;  // handle error
 
@@ -34,7 +36,7 @@ int main(void)
       ;  // handle case where the write would block
   else
       ;  // handle real error
-
+  /**/
   // Reading data is similar
     close(fd);
 
