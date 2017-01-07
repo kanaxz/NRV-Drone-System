@@ -36,7 +36,7 @@ int main(void)
       ;  // handle case where the write would block
   else
       ;  // handle real error
-  /**/
+  */
   // Reading data is similar
     close(fd);
 
