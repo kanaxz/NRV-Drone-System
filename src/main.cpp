@@ -35,7 +35,8 @@ int main(void)
     std::cin>>message;
     std::cout<< "message="<<message<<",size="<<strlen(message)<<std::endl;
     ssize_t written = write(fd, message, strlen(message));
-      if(written >= 0){
+    std::cout<<"written="<<written<<std::endl;
+    if(written >= 0){
       // success
       std::cout<<"success"<<std::endl;
     }
