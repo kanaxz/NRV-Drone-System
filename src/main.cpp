@@ -33,6 +33,7 @@ int main(void)
   while(true){
     char message[10];
     std::cin>>message;
+    message[strlen(message)] = '\n';
     std::cout<< "message="<<message<<",size="<<strlen(message)<<std::endl;
     ssize_t written = write(fd, message+"\n", strlen(message+1));
     std::cout<<"written="<<written<<std::endl;
