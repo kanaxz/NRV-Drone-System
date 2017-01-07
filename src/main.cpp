@@ -46,7 +46,7 @@ int main(void)
       // real error
       std::cout<<"real error ?"<<std::endl;
     }
-    delete [] message;
+    delete message;
   }
   // Try to write some data
   
