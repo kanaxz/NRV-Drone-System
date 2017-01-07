@@ -16,9 +16,9 @@ int main(void)
   // Last key hit
   int			key;
   // Servo mastah file descriptor
-  std::filebuf		fb;
+  std::filebuf		*fb;
   // Output stream servomaster
-  std::istream		is;
+  std::istream		*is;
   
   motorFL = new Motor(17); // Instanciates the motor from GPIO 17
   motorFR = new Motor(17); // Instanciates the motor from GPIO 17
@@ -28,7 +28,7 @@ int main(void)
   fb.open("/dev/servomaster", std::ios::in);
   // Output stream instanciation
   is = new istream(fb);
-  is.write("1=25%");
+  is->write("1=25%");
   
   // Main infinite loop used to execute keystroke-based actions
   /*  while (1)
