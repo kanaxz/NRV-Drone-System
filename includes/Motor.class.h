@@ -13,9 +13,9 @@ private:
 
 	int servoNumber;
 public:
-    Motor();
-    ~Motor();
-
+    Motor(int servoNumber);
+    ~Motor(void);
+    void start(void);
 
 };
 

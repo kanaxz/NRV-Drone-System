@@ -2,12 +2,16 @@
 
 #define SERVOBLASTER_DEV_FILE			"/dev/servoblaster"
 
-Motor::Motor()
+Motor::Motor(int servoNumber)
 {
+	this->servoNumber = servoNumber;
+}
+
+void Motor::start(void){
 
 }
 
-Motor::~Motor()
+Motor::~Motor(void)
 {
     
 }
