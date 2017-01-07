@@ -17,8 +17,8 @@
  * along with Raspcopter.  If not, see <http://www.gnu.org/licenses/>.
  * ================================================================== */
 
-#ifndef _MPOU6050_H_
-#define _MPOU6050_H_
+#ifndef _MPU6050_H_
+#define _MPU6050_H_
 
 #include <cmath>
 #include <cstdio>
@@ -37,11 +37,11 @@
 
 
 
-class MPOU6050
+class MPU6050
 {
 public:
-    MPOU6050();
-    ~MPOU6050();
+    MPU6050();
+    ~MPU6050();
 
     uint8_t getQuaternion(int16_t *data, const uint8_t* packet=0);
     uint8_t getQuaternion(Quaternion *q, const uint8_t* packet=0);
@@ -318,4 +318,4 @@ const uint8_t dmpUpdates[MPU6050_DMP_UPDATES_SIZE] PROGMEM = {
 #define MPU6050_WHO_AM_I_BIT               0x06
 #define MPU6050_WHO_AM_I_LENGTH            0x06
 
-#endif /* _MPOU6050_H_ */
+#endif /* _MPU6050_H_ */
