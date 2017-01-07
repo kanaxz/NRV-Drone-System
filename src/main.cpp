@@ -22,7 +22,7 @@ int main(void)
   motorBR = new Motor(17); // Instanciates the motor from GPIO 17
 
   // Open the device in non-blocking mode
-  int fd = open("/dev/ttyPA1", O_RDWR | O_NONBLOCK);
+  int fd = open("/dev/servoblaster", O_RDWR | O_NONBLOCK);
 
   /*
   if(fd < 0)
