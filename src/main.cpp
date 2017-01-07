@@ -2,6 +2,9 @@
 #include "Brain.class.h"
 #include "unistd.h"
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
 
 int main(void)
 {
@@ -22,13 +25,16 @@ int main(void)
   motorBR = new Motor(17); // Instanciates the motor from GPIO 17
 
   // Open the device in non-blocking mode
-  int fd = open("/dev/servoblaster", O_WRONLY | O_APPEND);
+  
 
-  
-  if(fd < 0){
-    std::cout<<"fd error"<<std::endl;
-  }
-  
+    FILE *fp;
+    fp = fopen("/dev/servoblaster", "w");
+    if (fp == NULL) {
+        printf("Error opening file\n");
+        exit(0); 
+    }   
+    
+   
   
   while(true){
     char message[10];
@@ -37,26 +43,16 @@ int main(void)
     std::cout<< "message="<<message<<",size="<<strlen(message)<<std::endl;
     message[strlen(message)] = '\n';
     message[strlen(message)] = '\0';
-    ssize_t written = write(fd, message, strlen(message));
-    std::cout<<"written="<<written<<std::endl;
-    if(written >= 0){
-      // success
-      std::cout<<"success"<<std::endl;
-    }
-    else if(errno == EWOULDBLOCK)
-      // write blocked
-      std::cout<<"write blocked"<<std::endl;
-    else {
-      // real error
-      std::cout<<"real error ?"<<std::endl;
-    }
+    fprintf(fp, message);
+    
   }
   // Try to write some data
   
 
  
   
-  close(fd);
+   fclose(fp);
+    fflush(fp); 
 
   // DESTROY TIME
   delete motorFL;
