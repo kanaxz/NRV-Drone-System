@@ -36,6 +36,7 @@ int main(void)
     
     std::cout<< "message="<<message<<",size="<<strlen(message)<<std::endl;
     message[strlen(message)] = '\n';
+    message[strlen(message)] = '\0';
     ssize_t written = write(fd, message, strlen(message));
     std::cout<<"written="<<written<<std::endl;
     if(written >= 0){
