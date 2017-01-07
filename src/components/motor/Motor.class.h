@@ -3,11 +3,19 @@
 #define _MOTOR_H_
 
 
+
+
+
 class Motor
 {
+
+private:
+
+	int servoNumber;
 public:
     Motor();
     ~Motor();
+
 
 };
 
