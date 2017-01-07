@@ -24,26 +24,28 @@ int main(void)
   // Open the device in non-blocking mode
   int fd = open("/dev/servoblaster", O_RDWR | O_NONBLOCK);
 
-  /*
-  if(fd < 0)
-      ;  // handle error
-  */
+  
+  if(fd < 0){
+    std::cout<<"fd error"<<std::endl;
+  }
+     
   // Try to write some data
   ssize_t written = write(fd, "1=25%", 5);
+
  
   if(written >= 0){
-  
+    // success
+    std::cout<<"success"<<std::endl;
+  }
+  else if(errno == EWOULDBLOCK)
+    // write blocked
+    std::cout<<"write blocked"<<std::endl;
+  else {
+    // real error
+    std::cout<<"real error ?"<<std::endl;
   }
 
-  /*
-      ;  // handle successful write (which might be a partial write!)
-  else if(errno == EWOULDBLOCK)
-      ;  // handle case where the write would block
-  else
-      ;  // handle real error
-  */
-  // Reading data is similar
-    close(fd);
+  close(fd);
 
   // DESTROY TIME
   delete motorFL;
