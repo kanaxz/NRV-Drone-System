@@ -30,8 +30,12 @@ int main(void)
   */
   // Try to write some data
   ssize_t written = write(fd, "1=25%", 5);
+ 
+  if(written >= 0){
+  
+  }
+
   /*
-  if(written >= 0)
       ;  // handle successful write (which might be a partial write!)
   else if(errno == EWOULDBLOCK)
       ;  // handle case where the write would block
