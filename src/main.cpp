@@ -34,7 +34,7 @@ int main(void)
     char message[10];
     std::cin>>message;
     std::cout<< "message="<<message<<",size="<<strlen(message)<<std::endl;
-    ssize_t written = write(fd, message, strlen(message));
+    ssize_t written = write(fd, message+"\n", strlen(message+1));
     std::cout<<"written="<<written<<std::endl;
     if(written >= 0){
       // success
