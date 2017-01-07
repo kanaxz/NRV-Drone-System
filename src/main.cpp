@@ -24,10 +24,10 @@ int main(void)
   // Open the device in non-blocking mode
   int fd = open("/dev/ttyPA1", O_RDWR | O_NONBLOCK);
 
-  
+  /*
   if(fd < 0)
       ;  // handle error
-
+  */
   // Try to write some data
   ssize_t written = write(fd, "1=25%", 5);
   /*

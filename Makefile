@@ -13,7 +13,7 @@ DIRSRC		=	src
 CMPTDIR     =   $(DIRSRC)/components
 
 SRCS =	$(DIRSRC)/main.cpp \
-		$(CMPTDIR)/Motor/Motor.class.cpp \
+		$(CMPTDIR)/motor/Motor.class.cpp \
 		$(CMPTDIR)/MPU6050/MPU6050.class.cpp \
 		$(CMPTDIR)/brain/Brain.class.cpp \
 		$(CMPTDIR)/PID/PID.class.cpp
