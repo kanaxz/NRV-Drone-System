@@ -34,21 +34,21 @@ int main(void)
         exit(0); 
     }   
     
+    fprintf(fp, "1=20%");
    
-  
+  /*
   while(true){
     char message[10];
     std::cin>>message;
     
     std::cout<< "message="<<message<<",size="<<strlen(message)<<std::endl;
-    message[strlen(message)] = '\n';
     message[strlen(message)] = '\0';
     fprintf(fp, message);
     
   }
   // Try to write some data
   
-
+  /**/
  
   
    fclose(fp);
