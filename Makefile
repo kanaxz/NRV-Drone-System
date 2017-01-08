@@ -16,7 +16,7 @@ SRCS =	$(DIRSRC)/main.cpp \
 		$(CMPTDIR)/motor/Motor.class.cpp \
 		$(CMPTDIR)/MPU6050/MPU6050.class.cpp \
 		$(CMPTDIR)/brain/Brain.class.cpp \
-		$(CMPTDIR)/math	/PID.class.cpp
+		$(CMPTDIR)/math/PID.class.cpp
 
 # **************************************************************************** #
 #		DIRECTORIES
