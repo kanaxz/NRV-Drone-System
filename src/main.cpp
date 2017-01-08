@@ -19,7 +19,7 @@ int main(void)
   // Last key hit
 
   
-  motorFL = new Motor(17); // Instanciates the motor from GPIO 17
+  motorFL = new Motor(1); // Instanciates the motor from GPIO 17
   motorFR = new Motor(17); // Instanciates the motor from GPIO 17
   motorBL = new Motor(17); // Instanciates the motor from GPIO 17
   motorBR = new Motor(17); // Instanciates the motor from GPIO 17
@@ -27,32 +27,10 @@ int main(void)
   // Open the device in non-blocking mode
   
 
-    FILE *fp;
-    fp = fopen("/dev/servoblaster", "w");
-    if (fp == NULL) {
-        printf("Error opening file\n");
-        exit(0); 
-    }   
-    
-    fprintf(fp, "1=20%%\n");
-   
-  /*
-  while(true){
-    char message[10];
-    std::cin>>message;
-    
-    std::cout<< "message="<<message<<",size="<<strlen(message)<<std::endl;
-    message[strlen(message)] = '\0';
-    fprintf(fp, message);
-    
-  }
-  // Try to write some data
-  
-  */
+  motorFL->setValue(20);
  
   
-   fclose(fp);
-    fflush(fp); 
+ 
 
   // DESTROY TIME
   delete motorFL;

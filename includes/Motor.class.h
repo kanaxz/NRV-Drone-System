@@ -10,12 +10,15 @@ class Motor
 {
 
 private:
-
+	FILE *fp;
 	int servoNumber;
+	void start(void);
+	void stop(void);
 public:
     Motor(int servoNumber);
     ~Motor(void);
-    void start(void);
+
+    void setValue(int value);
 
 };
 
