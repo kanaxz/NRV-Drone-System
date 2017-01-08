@@ -48,7 +48,7 @@ int main(void)
   }
   // Try to write some data
   
-  /**/
+  */
  
   
    fclose(fp);
