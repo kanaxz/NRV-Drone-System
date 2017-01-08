@@ -19,8 +19,8 @@ void Motor::start(void){
 }
 
 void Motor::setValue(int value){
-	char *message = std::to_string(this->servoNumber)+"="+std::to_string(value)+"%";
-	fprintf(this->fp,message.c_str());
+	string message = std::to_string(this->servoNumber)+"="+std::to_string(value)+"%";
+	fprintf(this->fp,message);
 }
 
 void Motor::stop(void){
