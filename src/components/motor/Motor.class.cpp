@@ -11,7 +11,9 @@ Motor::Motor(int servoNumber)
 void Motor::start(void){
 	this->fp = fopen(SERVOBLASTER_DEV_FILE, "w");
     if (this->fp == NULL) {
-        throw new std::exception("Error opening file"); 
+    	//TODO : exception
+    	std::cout<<"Error opening file"<<std::endl;
+        //throw new std::exception("Error opening file"); 
     } 
 	
 }
