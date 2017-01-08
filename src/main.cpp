@@ -34,7 +34,7 @@ int main(void)
         exit(0); 
     }   
     
-    fprintf(fp, "1=20\%");
+    write(fp, "1=20%",5);
    
   /*
   while(true){
