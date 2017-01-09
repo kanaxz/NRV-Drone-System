@@ -10,14 +10,21 @@ class Brain
 {
 
 private:
-	MotorsManager motors;
+	// Front left motor 
+  	Motor			*motorFL;
+  	// Front right motor 
+  	Motor			*motorFR;
+  	// Back left motor 
+  	Motor			*motorBL;
+  	// Back right motor 
+  	Motor			*motorBR;
 public:
     Brain();
     ~Brain();
 
 
 
-    void start(void);
+    void initMotors(void);
 
 };
 

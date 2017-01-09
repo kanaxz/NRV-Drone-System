@@ -7,12 +7,12 @@ Brain::Brain()
 
 Brain::~Brain()
 {
-    this->motors.clear();
+	
 }
 
 void Brain::initMotors(void){
-	this->motors.registerMotor(new Motor(ServoNumbers::BL));
-	this->motors.registerMotor(new Motor(ServoNumbers::BR));
-	this->motors.registerMotor(new Motor(ServoNumbers::FL));
-	this->motors.registerMotor(new Motor(ServoNumbers::FR));
+	this->motorBL = new Motor(ServoNumbers::BL);
+	this->motorBR = new Motor(ServoNumbers::BR);
+	this->motorFL = new Motor(ServoNumbers::FL);
+	this->motorFR = new Motor(ServoNumbers::FR);
 }

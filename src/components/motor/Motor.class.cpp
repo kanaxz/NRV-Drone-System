@@ -18,11 +18,6 @@ void Motor::start(void){
 	
 }
 
-
-int Motor::getServoNumber(void){
-	return this->servoNumber;
-}
-
 void Motor::setValue(int value){
 	std::string message = std::to_string(this->servoNumber)+"="+std::to_string(value)+"%\n";
 
