@@ -10,7 +10,7 @@ class Brain
 {
 
 private:
-
+	MotorsManager motors;
 public:
     Brain();
     ~Brain();

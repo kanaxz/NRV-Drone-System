@@ -2,14 +2,17 @@
 
 Brain::Brain()
 {
-
+	this->initMotors();
 }
 
 Brain::~Brain()
 {
-    
+    this->motors.clear();
 }
 
-void Brain::start(void){
-
+void Brain::initMotors(void){
+	this->motors.registerMotor(new Motor(ServoNumbers::BL));
+	this->motors.registerMotor(new Motor(ServoNumbers::BR));
+	this->motors.registerMotor(new Motor(ServoNumbers::FL));
+	this->motors.registerMotor(new Motor(ServoNumbers::FR));
 }

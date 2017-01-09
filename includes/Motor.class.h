@@ -19,6 +19,7 @@ public:
     Motor(int servoNumber);
     ~Motor(void);
 
+    int getServoNumber(void);
     void setValue(int value);
 
 };
