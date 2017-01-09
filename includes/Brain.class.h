@@ -18,6 +18,11 @@ private:
   	Motor			*motorBL;
   	// Back right motor 
   	Motor			*motorBR;
+
+    MPU6050   *IMU;
+
+    //pitch
+    PID  pitchPID,rollPID;
 public:
     Brain();
     ~Brain();
